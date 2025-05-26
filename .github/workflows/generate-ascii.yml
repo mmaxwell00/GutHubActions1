@@ -11,13 +11,13 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Install Cowsay Program
-        run: sudo apt-get instsall cowsay -y
+        run: sudo apt-get install cowsay -y
 
       - name: Execute Cowsay CMD
         run: cowsay f- dragon "Run for cover, Iam a DRAGON....RAWR" >> dragon.txt
 
       - name: Test File Exists
-        run: grap -i "dragon" dragon.txt
+        run: grep -i "dragon" dragon.txt
         
       - name: Read File
         run: cat dragont.txt
